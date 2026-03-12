@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana da Maquiagem — Atakado Farma</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" id="tab1" class="active" onclick="return showPage('p1', this)">🛍 Catálogo</a>
+  <a href="#" id="tab2"               onclick="return showPage('p2', this)">🌸 Promoções</a>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 1 — CATÁLOGO
+══════════════════════════════════════ -->
+<div id="p1" class="page visible">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">✦ Março das Mulheres ✦</div>
+    <h1>Semana da<br><span>Maquiagem</span></h1>
+    <p>Produtos selecionados com descontos<br>exclusivos para você brilhar ainda mais 💋</p>
+    <div class="hero-icons">
+      <div class="hero-icon"><div class="bubble">💄</div><span>Batom</span></div>
+      <div class="hero-icon"><div class="bubble">✨</div><span>Base</span></div>
+      <div class="hero-icon"><div class="bubble">👁</div><span>Olhos</span></div>
+      <div class="hero-icon"><div class="bubble">🌸</div><span>Blush</span></div>
+    </div>
+  </div>
+
+  <!-- CATÁLOGO -->
+  <section>
+    <div class="section-label">Explorar</div>
+    <div class="section-title">Nossos <em>Produtos</em></div>
+    <div class="section-sub">Toque em uma categoria para filtrar</div>
+
+    <!-- Filtros — data-filter deve bater com CATEGORY_MAP em filter.js -->
+<div class="cat-scroll">
+  <div class="cat-tag active"  data-filter="todos">Todos</div>
+  <div class="cat-tag"         data-filter="Rosto">🌟 Rosto</div>
+  <div class="cat-tag"         data-filter="Boca">💋 Boca</div>
+  <div class="cat-tag"         data-filter="Olhos">👁 Olhos</div>
+  <div class="cat-tag"         data-filter="Acessórios">🖌️ Acessórios</div>
+</div>
+    <!-- Grid preenchido via catalog.js -->
+    <div class="product-grid" id="product-grid">
+      <!-- carregando... -->
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="divider"><span>✦</span></div>
+    <a class="btn-whatsapp"
+       href="https://wa.me/553599227098?text=Olá! Vi o catálogo e quero saber mais sobre os produtos! 💄">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Falar no WhatsApp
+    </a>
+    <a class="btn-share" href="javascript:void(0)" onclick="shareLink()">
+      🔗 Compartilhar catálogo
+    </a>
+  </section>
+
+</div><!-- /p1 -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 2 — PROMOÇÕES
+══════════════════════════════════════ -->
+<div id="p2" class="page">
+
+  <!-- HERO -->
+  <div class="hero hero--promo">
+    <div class="hero-badge">🌸 Março é das Mulheres</div>
+    <h1>Ofertas<br><span>Especiais</span></h1>
+    <p>Aproveite os melhores descontos<br>da Semana da Maquiagem! ✨</p>
+  </div>
+
+  <!-- BANNER + OFERTAS -->
+  <section>
+    <div class="promo-banner">
+      <div class="tag">⏰ Válido essa semana</div>
+      <h3>Produtos com até<br>12% de desconto!</h3>
+      <p>Em toda linha de batons e gloss. Quanto mais você compra, mais você economiza.</p>
+      </div>
+
+    <div class="section-label">Promoções</div>
+    <div class="section-title">Não perca as <em>ofertas</em></div>
+    <div class="section-sub">Por tempo limitado. Enquanto durar o estoque.</div>
+
+  
+  <!-- INFO DA FARMÁCIA -->
+  <section>
+    <div class="section-label">Sobre nós</div>
+    <div class="section-title">Farmácia <em>Atakado Farma</em></div>
+    <div class="section-sub">Aqui nós cuidamos de você!</div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div class="info-label">Endereço</div>
+        <div class="info-value">Rua João Teixeira Mendes, 232 - Jd. Canadá</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div class="info-label">Horário</div>
+        <div class="info-value">Seg–Sex 8h–20h<br>Sáb–8h–19h</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div class="info-label">Telefone</div>
+        <div class="info-value">(35) 9922-7098</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚚</div>
+        <div class="info-label">Delivery</div>
+        <div class="info-value">Entregas para toda a região!</div>
+      </div>
+    </div>
+
+    <a class="btn-whatsapp"
+       href="https://wa.me/553599227098?text=Olá! Vi as promoções da Semana da Maquiagem e quero fazer um pedido! 🌸">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Pedir pelo WhatsApp
+    </a>
+    <a class="btn-share" href="javascript:void(0)" onclick="shareLink()">
+      🔗 Compartilhar promoções
+    </a>
+  </section>
+
+</div><!-- /p2 -->
+
+
+<!-- ══════════════════════════════════════
+     MODAL DE PRODUTO
+══════════════════════════════════════ -->
+<div id="modal-overlay">
+  <div id="product-modal" role="dialog" aria-modal="true">
+
+    <!-- Imagem / Emoji grande -->
+    <div class="modal-img-wrap">
+   <img id="modal-img" class="modal-product-img" alt="">
+      <span id="modal-badge" class="modal-badge"></span>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="modal-body">
+      <div id="modal-cat"   class="modal-cat"></div>
+      <div id="modal-name"  class="modal-name"></div>
+      <div id="modal-desc"  class="modal-desc"></div>
+
+      <div class="modal-price-row">
+        <span id="modal-price"     class="modal-price"></span>
+        <span id="modal-old-price" class="modal-old-price"></span>
+      </div>
+    </div>
+
+    <!-- CTA WhatsApp -->
+    <div class="modal-footer">
+      <a id="modal-wa-btn" class="btn-whatsapp" href="#" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Comprar pelo WhatsApp
+      </a>
+      <p class="modal-hint">Toque fora para fechar</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Farmácia Atakado Farma</strong>
+  Desenvolvido com 💕 para o Março das Mulheres<br>
+  © 2026 • Todos os preços sujeitos a alteração
+</footer>
+
+<!-- JS — ordem importa: app → catalog → filter -->
+<script src="js/app.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/modal.js"></script>
+
+</body>
+</html>

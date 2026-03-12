@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════
+   variables.css — Tokens de design
+   Para personalizar: edite apenas este arquivo
+═══════════════════════════════════════ */
+
+:root {
+  /* Paleta principal */
+  
+  --rose:    #F4A8A8;
+  --blush:   #FDDADA;
+  --gold:    #3b3434;
+  --burg:    #C0001A;
+  --deep:    #7A0010;
+  --cream:   #FFF5F5;
+  --light:   #FFFAFA;
+  --text:    #1A0005;
+  --muted:   #8A4A50;
+
+  /* Gradientes */
+  --grad-hero:    linear-gradient(145deg, #7A0010 0%, #C0001A 55%, #E03040 100%);
+  --grad-hero-p2: linear-gradient(145deg, #5C0010 0%, #A00018 55%, #D03040 100%);
+  --grad-banner:  linear-gradient(120deg, #7A0010, #C0001A);
+  --grad-card:    linear-gradient(135deg, var(--blush), var(--rose));
+
+  /* Tipografia */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans:  'DM Sans', sans-serif;
+
+  /* Tamanhos de fonte */
+  --text-xs:   10px;
+  --text-sm:   12px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  26px;
+  --text-3xl:  36px;
+
+  /* Bordas arredondadas */
+  --radius-sm:  10px;
+  --radius-md:  16px;
+  --radius-lg:  18px;
+  --radius-xl:  20px;
+  --radius-full: 999px;
+
+  /* Sombras */
+  --shadow-card:   0 2px 12px rgba(192,0,26,0.08);
+  --shadow-offer:  0 2px 14px rgba(192,0,26,0.07);
+  --shadow-info:   0 2px 12px rgba(192,0,26,0.06);
+  --shadow-wa:     0 4px 16px rgba(37,211,102,0.3);
+
+  /* Espaçamentos */
+  --section-pad:    36px 20px;
+  --hero-pad:       52px 28px 44px;
+
+  /* Largura máxima (mobile-first) */
+  --max-width: 430px;
+
+  /* WhatsApp */
+  --whatsapp-number: "553599227098";
+  --whatsapp-msg-catalogo: "Olá! Vi o catálogo e quero saber mais sobre os produtos! 💄";
+  --whatsapp-msg-promo: "Olá! Vi as promoções da Semana da Maquiagem e quero fazer um pedido! 🌸";
+}
